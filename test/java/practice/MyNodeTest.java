@@ -1,7 +1,8 @@
 package practice;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+
+import org.junit.Assert;
+import org.junit.Test;
 
 public class MyNodeTest {
     @Test
@@ -13,7 +14,7 @@ public class MyNodeTest {
         mySecondNode.setNext(myThirdNode);
         boolean result = myFirstNode.getNext().equals(mySecondNode)&&
                 mySecondNode.getNext().equals(myThirdNode);
-        Assertions.assertTrue(result);
+        Assert.assertTrue(result);
 
     }
 }
