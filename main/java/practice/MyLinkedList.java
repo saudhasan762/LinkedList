@@ -34,7 +34,7 @@ public class MyLinkedList {
         System.out.println(myNode);
     }
 
-    public void append(INode newNode) {
+    public INode append(INode newNode) {
         if (this.head==null){
             this.head=newNode;
         }
@@ -44,6 +44,7 @@ public class MyLinkedList {
             this.tail.setNext(newNode);
             this.tail = newNode;
         }
+        return newNode;
     }
 
     public void insert(INode myNode, INode newNode) {
