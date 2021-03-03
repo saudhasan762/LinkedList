@@ -10,6 +10,7 @@ public class MyLinkedHashMapTest {
         String sentence = "Paranoids are not paranoid because they are paranoid but " +
                 "because they keep putting themselves deliberately into paranoid " +
                 "avoidable situations";
+        System.out.println(sentence);
         MyLinkedHashMap<String, Integer> myLinkedHashMap = new MyLinkedHashMap<>();
         String [] words = sentence.toLowerCase().split(" ");
         for (String word : words){
