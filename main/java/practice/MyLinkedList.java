@@ -1,6 +1,6 @@
 package practice;
 
-public class MyLinkedList {
+public class MyLinkedList<K> {
     public INode head;
     public INode tail;
 
@@ -102,5 +102,24 @@ public class MyLinkedList {
             }
             previousNode.setNext(tempNode.getNext());
         }
+    }
+
+    public INode<K> search(K key) {
+        INode<K> tempNode = head;
+        while (tempNode != null && tempNode.getNext() != null){
+            if(tempNode.getKey().equals(key))
+                return tempNode;
+            tempNode = tempNode.getNext();
+        }
+        return null;
+    }
+
+    public void printMyNodes(){
+        System.out.println("My Nodes: " + head);
+    }
+
+    @Override
+    public String toString(){
+        return "MyLinkedListNodes{" + head + '}';
     }
 }

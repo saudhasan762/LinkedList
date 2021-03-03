@@ -138,7 +138,6 @@ public class MyLinkedListTest {
         MyNode<Integer> myFourthNode = new MyNode<>(63);
 
         MyLinkedList myLinkedList = new MyLinkedList();
-
         myLinkedList.append(myFirstNode);
         myLinkedList.append(mySecondNode);
         myLinkedList.append(myThirdNode);
