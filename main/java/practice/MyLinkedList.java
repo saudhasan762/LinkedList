@@ -91,4 +91,16 @@ public class MyLinkedList {
             return newPosition;
     }
 
+    public void deleteNode(INode newNode) {
+        boolean check = search(newNode);
+        if (check) {
+            INode tempNode = this.head;
+            INode previousNode = null;
+            while (tempNode != null && tempNode.getKey() != newNode.getKey()) {
+                previousNode = tempNode;
+                tempNode = tempNode.getNext();
+            }
+            previousNode.setNext(tempNode.getNext());
+        }
+    }
 }
